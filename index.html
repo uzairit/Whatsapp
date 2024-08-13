@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="img/icons8-whatsapp-16.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp</title>
+    <style>
+        /* *{margin: 0%;} */
+        body{margin: 0%;}
+        #main{display: flex; justify-content: space-between;}
+        #main1{overflow-y: scroll; width: 420px; height: 715px;}
+        #page1{}
+        #page2{background-color:#F8F7F3; height: 97.5vh; width: 67.10%;}
+        #scroll{position: fixed; background-color:white;}
+        #box1{display: flex; background-color:white;}
+        #dp1{margin-left: 20px; margin-top: 20px; margin-right: 30px; border-radius:50%; width: 35px; height: 35px; background-image: url(img/icons8-u-67.png); background-size:cover;}
+        #icon1{height: 20px; margin-top: 31px;margin-left: 150px;}
+        #icon1:hover{cursor: pointer;}
+        #icon2:hover{cursor: pointer;}
+        #icon3:hover{cursor: pointer;}
+        #icon2{height: 20px; margin-top: 31px;margin-left: 20px;}
+        #searchbar{background-color:white; padding-left: 10px; margin-left: 20px; width:355px; height: 32px; box-shadow: rgba(0, 0, 0, 0.22) 0px 0px 3px 2px; border: none;border-radius: 0.2rem;}
+        ::placeholder{color:#C5C5C5; font-size:16px;} 
+        #icon3{width: 22px; position: relative; top: 6px; right: 40px;}
+        .chat1{display:flex; z-index: -1;}
+        #chat1{display:flex; z-index: -1;}
+        .chat1:hover{background-color:#EBEBEB; z-index:+1;}
+        .active,#chat1:hover{background-color:#EBEBEB;}
+        #dp2{margin-top: 40px; margin-left: 15px; background-image:url(img/dp.jpg); background-size:68px; background-repeat: no-repeat; border-radius:50%; width: 45px; height: 45px; }
+        #dp3{margin-top: 40px; margin-left: 15px; background-image:url(img/dp2.jpg); background-size:68px; background-repeat: no-repeat; border-radius:50%; width: 45px; height: 45px; }
+        #dp4{margin-top: 40px; margin-left: 15px; background-image:url(img/dp4.webp); background-size:80px; background-repeat: no-repeat; border-radius:50%; width: 45px; height: 45px; }
+        #dp5{margin-top: 40px; margin-left: 15px; background-image:url(img/dp5.jpg); background-size:68px; background-repeat: no-repeat; border-radius:50%; width: 45px; height: 45px; }
+        #dp6{margin-top: 40px; margin-left: 15px; background-image:url(img/dp6.jpg); background-size:68px; background-repeat: no-repeat; border-radius:50%; width: 45px; height: 45px; }
+        #dp7{margin-top: 40px; margin-left: 15px; background-image:url(img/dp7.jpg); background-size:68px; background-repeat: no-repeat; border-radius:50%; width: 45px; height: 45px; }
+        #dp8{margin-top: 40px; margin-left: 15px; background-image:url(img/dp8.jpg); background-size:68px; background-repeat: no-repeat; border-radius:50%; width: 45px; height: 45px; }
+        
+        #dp9{margin-top: 40px; margin-left: 15px; background-image:url(img/dp34.webp); background-size:68px; background-repeat: no-repeat; border-radius:50%; width: 45px; height: 45px; }
+        #dp10{margin-top: 40px; margin-left: 15px; background-image:url(img/dp.jpg); background-size:68px; background-repeat: no-repeat; border-radius:50%; width: 45px; height: 45px; }
+        #dp11{margin-top: 40px; margin-left: 15px; background-image:url(img/dp2.jpg); background-size:68px; background-repeat: no-repeat; border-radius:50%; width: 45px; height: 45px; }
+        #dp12{margin-top: 40px; margin-left: 15px; background-image:url(img/dp34.jpg); background-size:68px; background-repeat: no-repeat; border-radius:50%; width: 45px; height: 45px; }
+        .time1{margin-left: 155px; margin-top: 45px; color: #67DD95;}  
+        .time2{margin-left: 155px; margin-top: 45px; color:#C0C0C0;}  
+        .name1{margin-top: 43px; margin-left:15px;}
+        .message{margin-top: 70px; position: relative; right: 68px; color:#C0C0C0; z-index: -1;;}
+        .typing{margin-top: 70px; position: relative; right: 68px; color:#67DD95; z-index: -1;}
+        .online{border-radius:50%; width: 18px; height: 18px; text-align: center; margin-top: 65px; position:relative;  right: 20px;  z-index: -1; color: white; background-color: #67DD95;}
+        #top{display: flex;}
+       #p{height: 20px; margin-left: 500px; margin-top: 25px;}
+       #p:hover{cursor: pointer;}
+       #v:hover{cursor: pointer;}
+       #s:hover{cursor: pointer;}
+       #v{height: 20px; margin-left: 15px; margin-top: 25px;}
+       #s{height: 20px; margin-left: 40px; margin-top: 25px;}
+       #f4{margin-top: 25px; margin-left: 10px;} 
+       #p4{color:#C0C0C0; margin-top: 50px; position:relative; right: 68px;}
+       #m1{width: 100px; height: 20px; background-color:white; margin-left: 15px; margin-top: 15px; padding-left: 5px; border: 1px solid black; border-radius:0.5rem ;}
+       #m2{width: 100px; height: 20px; background-color:#D6FCCE; margin-left: 650px; margin-top: 25px; padding-left: 5px; border: 1px solid black; border-radius:0.5rem ;}
+       #m3{width: 100px; height: 20px; background-color:#D6FCCE; margin-left: 650px; margin-top: 25px; padding-left: 5px; border: 1px solid black; border-radius:0.5rem ;}
+       #text{width: 850px; height: 30px; border-radius: 10px; margin-top: 460px; border: none;}        
+       #f{margin-left: 20px; margin-top: 20px; border-radius:50%; background-image:url(img/dp5.jpg); background-size: 68px; background-repeat: no-repeat; width: 45px; height: 45px;}
+    </style>
+</head>
+<body>
+    <div id="main">
+
+        <div id="page1">
+            <div id="scroll">
+                <div id="box1">
+                    <div id="dp1"></div>
+                    <h1>Chats</h1>
+                    <img id="icon1" src="img/icons8-edit-48.png">
+                    <img id="icon2" src="img/icons8-ellipsis-50.png">
+                </div>   
+                
+                <input type="search" id="searchbar" placeholder="Search or start new chat">
+                <img src="img/icons8-search-30.png" id="icon3">
+            </div>
+            
+
+        <div id="main1">
+
+            <div class="chat1">
+                <div id="dp2"></div>
+                <h3 class="name1">Friend 1</h3>
+                <p class="message">Yes! ok</p>
+                <p class="time1">1:50</p>
+                <div class="online">3</div>
+            </div>
+
+            <div class="chat1">
+                <div id="dp3"></div>
+                <h3 class="name1">Friend 2</h3>
+                <p class="message">Yes! ok</p>
+                <p class="time1">1:00</p>
+                <div class="online">2</div>
+            </div>
+                
+            <div class="chat1">
+                <div id="dp4"></div>
+                <h3 class="name1">Friend 3</h3>
+                <p class="message">Yes! ok</p>
+                <p class="time1">8:10</p>
+                <div class="online">1</div>
+            </div>
+
+            <div class="active" id="chat1">
+                <div id="dp5"></div>
+                <h3 class="name1">Friend 4</h3>
+                <p class="message">Yes! ok</p>
+                <p class="time2">8:10</p>
+            </div>
+
+            <div class="chat1">
+                <div id="dp6"></div>
+                <h3 class="name1">Friend 5</h3>
+                <p class="typing">typing..</p>
+                <p class="time2">9:15</p>
+            </div>
+
+            <div class="chat1">
+                <div id="dp7"></div>
+                <h3 class="name1">Friend 6</h3>
+                <p class="message">Yes! ok</p>
+                <p class="time2">8:00</p>
+            </div>
+
+
+
+            
+            <div class="chat1">
+                <div id="dp8"></div>
+                <h3 class="name1">Friend 7</h3>
+                <p class="message">Yes! ok</p>
+                <p class="time2">8:00</p>
+            </div>
+
+            <div class="chat1">
+                <div id="dp9"></div>
+                <h3 class="name1">Friend 6</h3>
+                <p class="message">Yes! ok</p>
+                <p class="time2">8:00</p>
+            </div>
+
+            <div class="chat1">
+                <div id="dp10"></div>
+                <h3 class="name1">Friend 6</h3>
+                <p class="message">Yes! ok</p>
+                <p class="time2">8:00</p>
+            </div>
+
+            <div class="chat1">
+                <div id="dp11"></div>
+                <h3 class="name1">Friend 6</h3>
+                <p class="message">Yes! ok</p>
+                <p class="time2">8:00</p>
+            </div>
+
+            <div class="chat1">
+                <div id="dp10"></div>
+                <h3 class="name1">Friend 6</h3>
+                <p class="message">Yes! ok</p>
+                <p class="time2">8:00</p>
+            </div>
+
+            <div class="chat1">
+                <div id="dp7"></div>
+                <h3 class="name1">Friend 6</h3>
+                <p class="message">Yes! ok</p>
+                <p class="time2">8:00</p>
+            </div>
+
+        </div>
+
+     
+
+        </div>     
+
+
+
+
+
+        <div id="page2">
+            <div id="top">
+                <div id="f"></div>
+                <h3 id="f4">Friend 4</h3>
+                <p id="p4">Online</p>
+                <img src="img/icons8-phone-50.png" id="p">
+                <img src="img/icons8-video-call-50.png" id="v">
+                <img src="img/icons8-search-32.png" id="s">
+            </div>
+
+            <div id="m1">Hi</div>
+            <div id="m2">Hi</div>
+            <div id="m3">How are you</div>
+
+            <input type="text" id="text" placeholder="Type a message">
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>
